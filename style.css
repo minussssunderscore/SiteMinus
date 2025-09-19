@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    backdrop-filter: blur(6px);
+    z-index: 10;
+}
+
+header nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+header nav a:hover { text-decoration: underline; }
+
+#hero {
+    width: 100%;
+    background: url(pexels-pixabay-270366.jpg) center/cover no-repeat;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10rem 1rem;
+    position: relative;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+#hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: #dbd4ac;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.btn:hover { background: #dbd4ac; }
+
+section {
+    padding: 5rem 1rem;
+    margin: auto;
+}
+h2 { text-align: center; margin-bottom: 2rem; }
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8 ease;
+}
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #8cbcf3;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover { background: #6291ba; }
+ 
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: #ccc;
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid white;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 50%, 100% { border-color: transparent; }
+    25%, 75% { border-color: white; }
+}
+
+@media (max-width: 768px) {
+    header { flex-direction: column; align-items: center; }
+    header nav { margin-top: 0.5rem; }
+}
+
+#about, #services {
+    background: #f9f9f9;
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin: 3rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    font-weight: bold;
+    text-align: center;
+}
+
+#about h2, #services h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #6291ba;
+}
+
+#services ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    font-weight: bold;
+}
+
+#services li:hover {
+    transform: translateY(-5px);
+}

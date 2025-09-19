@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucie - Conceptrice Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Lucie</div>
+        <nav>
+            <a href="#about">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1 class="typewriter">Bonjour, ici Lucie !</h1>
+        <p>Conceptrice web - Création de sites modernes et légers</p>
+        <a href="#contact" class="btn">Me contacter</a>
+    </section>
+
+    <section id="about" class="fade">
+        <h2>À propos</h2>
+        <p>Passionnée de code, je crée des sites web sur mesure et responsives.</p>
+    </section>
+
+    <section id="services" class="fade">
+        <h2>Mes services</h2>
+        <ul>
+            <li>Sites vitrines professionnels</li>
+            <li>Pages événementielles</li>
+            <li>Carte de visite</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="fade">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/xldwqbqd" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2025 Lucie - Tous droits réservés
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
